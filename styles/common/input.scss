@@ -1,0 +1,50 @@
+.field-wrapper-row {
+  display: flex;
+  .field-wrapper {
+    flex: 0 0 calc(48%);
+    margin-right: 4%;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+.field-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 28px;
+  label {
+    font-weight: 500;
+    font-size: 17px;
+    color: #091e42;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .error {
+    margin: 5px 0 0;
+    color: red;
+  }
+  input[type="text"],
+  input[type="password"],
+  input[type="email"],
+  input[type="number"] {
+    background: #f4f5f7;
+    border: 2px solid rgba(0, 0, 0, 0.1215686275);
+    border-radius: 4px;
+    padding: 12px;
+    font-size: 16px;
+    color: #091e42;
+    outline: none;
+    width: 100%;
+  }
+  &.checkbox {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: revert;
+    label {
+      margin-left: 10px;
+      margin-bottom: 0;
+    }
+  }
+}

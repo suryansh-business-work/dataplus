@@ -1,0 +1,56 @@
+
+.notifications-overlaypanel {
+  .p-overlaypanel-content {
+    padding: 0;
+    .notification-short-panel {
+      ul {
+        padding: 0;
+        list-style: none;
+        margin: 20px 0;
+        a {
+          padding: 10px 20px;
+          display: flex;
+          align-items: center;
+          .text-image {
+            margin-right: 20px;
+          }
+          h4 {
+            margin: 0;
+            font-weight: 600;
+          }
+          p {
+            margin: 0;
+            color: #333;
+            font-size: 14px;
+          }
+          &:hover {
+            background: #eef2ff;
+          }
+        }
+      }
+    }
+  }
+  .see-all-notification {
+    text-align: center;
+    a {
+      padding: 10px;
+      display: block;
+      border-top: 1px solid #b7b7b7;
+      color: #333;
+      font-weight: 600;
+      font-size: 12px;
+      &:hover {
+        background: #eef2ff;
+      }
+    }
+  }
+}
+
+.notification-offer-wrapper {
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
+  }
+}

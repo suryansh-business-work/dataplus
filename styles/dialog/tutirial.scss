@@ -1,0 +1,79 @@
+.tutorial-popup {
+  display: flex;
+  .tutorial-body {
+    flex: 0 0 calc(100% - 200px);
+    background: #f9f9f9;
+    padding: 5px 20px;
+    h3 {
+      margin-bottom: 20px;
+    }
+    img {
+      width: 100% !important;
+    }
+  }
+  .tutorial-list {
+    flex: 0 0 200px;
+    ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      a {
+        padding: 10px;
+        display: block;
+        &.active-tutorial {
+          font-weight: 600;
+          background: #eef2ff;
+          color: #4338ca;
+        }
+      }
+    }
+  }
+}
+
+.tutorial-popup {
+  .p-tabview {
+    display: flex;
+    .p-tabview-nav-container {
+      flex: 0 0 200px;
+    }
+    .p-tabview-nav {
+      flex-direction: column;
+      .p-tabview-nav-link {
+        padding: 20px 10px !important;
+        border: 0 !important;
+        box-shadow: none;
+        .p-tabview-title {
+          font-weight: 600;
+        }
+      }
+      .p-highlight a {
+        border-right: 4px solid #6366f1 !important;
+        border-radius: 0;
+        box-shadow: none !important;
+        border-bottom: 0 !important;
+      }
+      .p-tabview-ink-bar {
+        display: none !important;
+      }
+    }
+  }
+  li:not(.p-highlight):not(.p-disabled):hover .p-tabview-nav-link {
+    border: 2px solid transparent;
+    box-shadow: none;
+  }
+  .p-image-preview-container > img {
+    width: 100%;
+  }
+}
+
+.no-tutorial-found {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  button {
+    margin-top: 10px;
+  }
+}

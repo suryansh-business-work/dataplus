@@ -1,0 +1,130 @@
+.subcription-details {
+  .plan-info {
+    padding-top: 20px;
+  }
+  .plan-text {
+    font-size: 20px;
+    display: block;
+    margin: 20px 0 0;
+    font-weight: 600;
+  }
+  .feature-group {
+    margin-bottom: 30px;
+    .feature-name {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      display: block;
+    }
+    .feature-plan {
+      margin: 10px 20px 20px;
+      .plan-label {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        color: #707880;
+        font-size: 12px;
+        font-weight: 600;
+        .label-with-tooltips {
+          display: flex;
+        }
+        .custom-label-icon {
+          margin-left: 5px;
+          font-size: 12px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .price,
+  .status {
+    h4 {
+      color: #001529;
+      font-size: 14px;
+      margin: 20px 0 5px;
+    }
+    p {
+      font-size: 14px;
+      color: #282828;
+      margin-top: 0;
+    }
+  }
+}
+
+.add-payment-dialog {
+  .p-inputgroup-addon {
+    padding: 0;
+    svg {
+      width: 75px !important;
+      height: 35px;
+    }
+  }
+  .field-row-group {
+    display: flex;
+    .field-wrapper {
+      flex: 0 0 50%;
+      &:first-child {
+        padding-right: 15px;
+      }
+      &:last-child {
+        padding-left: 15px;
+      }
+    }
+  }
+}
+
+.payment-box {
+  background: transparent;
+  border-radius: 10px;
+  margin-top: -50px;
+  &:hover {
+    .payment-card {
+      top: 0;
+    }
+  }
+  .payment-card {
+    position: relative;
+    margin: 0;
+    top: 40px;
+    transition: all 0.1s linear;
+  }
+  .edit-card-option {
+    height: 50px;
+    background: #e4e7fd;
+    border-radius: 0 0 10px 10px;
+    margin-top: -10px;
+    ul {
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      list-style: none;
+      padding: 10px 20px 0;
+      margin: 0;
+      a {
+        display: block;
+        font-size: 12px;
+        margin-right: 10px;
+        padding: 10px;
+        color: #2236f1;
+        i {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
+
+.cancel-subcription-dialog {
+  label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  .form-field {
+    margin: 10px 10px 30px;
+    .p-dropdown {
+      width: 100%;
+    }
+  }
+}

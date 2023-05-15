@@ -1,0 +1,98 @@
+.auth-wrapper {
+  min-height: 100vh;
+  background-image: url("/auth-background.svg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: bottom;
+  padding: 100px 15px 15px;
+  .auth-form {
+    width: 550px;
+    max-width: 100%;
+    padding: 40px;
+    background: $white-color;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-shadow: 0 40px 80px rgb(0 0 0 / 5%), 0 8px 13px rgb(0 0 0 / 3%);
+    border-radius: 20px;
+    min-height: 350px;
+    margin: 10px auto 20px;
+    .p-button {
+      width: 100%;
+      margin: 0;
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #4854c2;
+    }
+    .p-button-label {
+      flex: 0 0 auto;
+    }
+    .auth-form-header {
+      text-align: center;
+      h3 {
+        justify-content: center;
+        margin: 0;
+        font-size: 26px;
+      }
+      p {
+        margin: 8px 0 20px;
+        color: #b5b5c3;
+      }
+      a {
+        color: #4854c2;
+      }
+    }
+  }
+  .logo {
+    width: 200px;
+    margin: 20px auto;
+    img {
+      width: 100%;
+    }
+  }
+  .captcha-wrapper {
+    margin-bottom: 20px;
+  }
+}
+
+.o-auth-login {
+  position: relative;
+  margin-top: 20px;
+  .o-auth-text {
+    text-align: center;
+    .or-text {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 14px;
+      color: #626262;
+      font-weight: 600;
+      position: relative;
+      background: $white-color;
+      z-index: 99;
+      padding: 0 15px;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      top: 9px;
+      left: 0;
+      background: #dbdbdb;
+      width: 100%;
+      height: 1px;
+    }
+  }
+}
+
+.warning-delete-message {
+  color: red;
+  font-size: 14px;
+}
+
+.delete-account-action {
+  padding: 30px 0 0;
+  text-align: right;
+  margin-bottom: -30px;
+  button {
+    margin-left: 10px;
+  }
+}

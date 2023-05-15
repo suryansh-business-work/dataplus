@@ -1,0 +1,80 @@
+.list-wrapper {
+  .list-column-wrap {
+    padding: 8px 15px;
+    cursor: pointer;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+      Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+      sans-serif;
+    .list-name {
+      font-size: 15px;
+      margin-bottom: 4px;
+      font-weight: 600;
+      color: #000000;
+      transition: all 0.1s linear;
+      &:hover {
+        color: #4f46e5;
+      }
+    }
+    .list-info {
+      font-size: 12px;
+      color: #7a7a7a;
+      font-weight: 400;
+    }
+  }
+  .p-datatable-tbody {
+    & > tr:hover {
+      background: #f1f2fb;
+      .list-options {
+        display: block;
+      }
+    }
+  }
+}
+
+.folder-area {
+  .folder-header-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    h5 {
+      margin: 0;
+      font-weight: 600;
+      font-size: 15px;
+      letter-spacing: 1px;
+    }
+  }
+}
+
+.list-options {
+  display: none;
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    a {
+      padding: 5px 20px;
+    }
+  }
+}
+
+.form-list-body-area {
+  ul {
+    padding: 0;
+    list-style: none;
+    a {
+      font-size: 14px;
+      display: block;
+      padding: 10px 10px;
+      transition: all 0.2s linear;
+      &:hover {
+        background: #eef2ff;
+      }
+      i {
+        margin-right: 10px;
+      }
+    }
+  }
+}

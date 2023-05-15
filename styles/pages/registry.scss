@@ -1,0 +1,233 @@
+#root {
+  .registry-wrapper {
+    .p-column-title {
+      width: 150px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      input {
+        width: 100% !important;
+        background: $white-color !important;
+      }
+    }
+    .registry-actions {
+      ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        a {
+          padding: 5px 10px;
+        }
+      }
+    }
+  }
+  .p-multiselect {
+    width: 200px;
+    margin-right: 20px;
+  }
+}
+
+.p-tooltip-arrow {
+  display: none !important;
+}
+
+.custom-property {
+  padding: 10px 0;
+  .form-field {
+    margin-bottom: 10px;
+    &.checkbox {
+      margin-top: 10px;
+    }
+    .required {
+      color: red;
+      margin-left: 4px;
+    }
+    h4 {
+      font-weight: 600;
+      border-bottom: 1px solid #e9e9e9;
+      padding: 10px;
+      margin-bottom: 30px;
+      font-size: 16px;
+      background: #efefef;
+    }
+    label {
+      font-weight: 600;
+      width: 120px;
+      display: inline-block;
+    }
+    input {
+      width: calc(100% - 130px);
+    }
+    .p-dropdown {
+      width: calc(100% - 130px);
+    }
+  }
+  .output-column-input {
+    padding: 20px;
+    background: #f1f1f1;
+    margin: 15px;
+    h4 {
+      margin-top: 0;
+    }
+    .form-field {
+      label {
+        display: block;
+        margin-bottom: 5px;
+        width: 100%;
+      }
+      input {
+        width: 100%;
+      }
+    }
+  }
+  .action-column {
+    text-align: right;
+  }
+  .custom-property-linear {
+    display: flex;
+    align-items: center;
+    label {
+      width: 160px !important;
+    }
+    .p-dropdown {
+      width: calc(100% - 670px) !important;
+      margin-right: 20px;
+    }
+    .p-button {
+      height: 48px;
+      position: relative;
+      top: 0px;
+      width: auto;
+    }
+    .create-custom-column {
+      padding: 15px !important;
+      span {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.table-setting-wrapper {
+  #root {
+    height: auto;
+    .table-column-list {
+      margin-top: 30px;
+    }
+    .p-reorderable-column {
+      pointer-events: none;
+    }
+    .p-sortable-column-icon {
+      pointer-events: all;
+    }
+  }
+}
+
+.data-box,
+.filter-wrapper {
+  h3 {
+    margin-bottom: 35px;
+  }
+}
+
+.data-form-wrapper,
+.filter-wrapper-dialog {
+  margin-bottom: 60px;
+  form {
+    height: 100%;
+    .form-field {
+      margin-bottom: 15px;
+      label {
+        font-weight: 600;
+        width: 150px;
+        display: inline-block;
+      }
+      &.text {
+        .p-inputtext {
+          width: calc(100% - 165px);
+          margin-left: 15px;
+        }
+      }
+    }
+    .action-wrapper {
+      position: absolute;
+      bottom: 0;
+      padding: 10px;
+      width: 100%;
+      left: 0;
+      border-top: 1px solid #c9c9c9;
+      background: #f9f9f9;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .last-update {
+        font-size: 13px;
+        padding: 10px;
+        color: #4a4a4a;
+      }
+    }
+  }
+}
+
+.saved-filter-dropdown {
+  margin: 40px 0;
+  display: block;
+}
+
+.replace-data-wrapper {
+  .replace-input-fields {
+    display: flex;
+    align-items: center;
+    label {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 5px;
+      font-weight: 600;
+    }
+    .form-field-body {
+      flex: 0 0 calc(50% - 25px);
+      .p-inputtext {
+        width: 100%;
+      }
+    }
+  }
+  .replace-icon {
+    padding: 10px;
+    font-size: 18px;
+    flex: 0 0 50px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 10px;
+    color: #4854c2;
+  }
+  .choose-column {
+    display: flex;
+    align-items: center;
+    padding: 30px 0;
+    .form-field.checkbox {
+      margin-right: 30px;
+      display: flex;
+      align-items: center;
+      label {
+        margin-left: 10px;
+        font-size: 15px;
+        font-weight: 400;
+      }
+    }
+  }
+  .choose-column-dropdown {
+    .p-dropdown {
+      width: 100%;
+    }
+    label {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 4px;
+      font-weight: 600;
+    }
+  }
+}

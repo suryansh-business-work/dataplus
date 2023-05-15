@@ -1,0 +1,169 @@
+.pricing-wrapper {
+  .pricing-header h3 {
+    display: flex;
+    font-size: 45px;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 15px 20px;
+    color: #3486ff;
+    font-weight: 800;
+    letter-spacing: 1px;
+  }
+  .pricing-option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0 10px;
+    .monthly-or-annualy {
+      display: flex;
+      align-items: center;
+      font-weight: 600;
+      .monthly-text {
+        margin-right: 10px;
+        padding-bottom: 5px;
+      }
+      .annualy-text {
+        margin-left: 10px;
+        padding-bottom: 5px;
+        .discount {
+          color: #009688;
+        }
+      }
+    }
+    .currency-selection {
+      display: flex;
+      align-items: center;
+      .select-currency-text {
+        margin-right: 10px;
+        font-size: 14px;
+      }
+      .p-dropdown {
+        background: #fff;
+        font-weight: 600;
+        font-size: 12px;
+        outline: 0;
+        border: 0 !important;
+        box-shadow: none !important;
+        .p-dropdown-label {
+          font-size: 12px;
+          padding: 0;
+          font-weight: bold;
+          color: #000;
+        }
+        .p-dropdown-trigger span {
+          font-size: 10px;
+        }
+        .p-dropdown-trigger {
+          width: 30px !important;
+          position: relative;
+          top: 1px;
+          .p-dropdown-trigger-icon {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+  .plan-area {
+    font-family: "Inter";
+    ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      .plan-body {
+        border: 1px solid lightgrey;
+        padding: 20px;
+        border-radius: 10px;
+        margin: 10px 0;
+        transition: all 0.2s linear;
+        &:hover {
+          border-color: #3486ff !important;
+        }
+        &.current-plan {
+          .selection-button {
+            .p-button {
+              opacity: 0.5;
+              user-select: none;
+              pointer-events: none;
+            }
+          }
+        }
+        .plan-icon {
+          font-size: 62px;
+          text-align: center;
+          padding: 20px 10px;
+          color: #3486ff;
+        }
+        .plan-name {
+          font-size: 27px;
+          text-align: center;
+          text-transform: uppercase;
+          font-weight: 600;
+          color: #cbcbcb;
+          padding: 10px;
+          letter-spacing: 1px;
+        }
+        .plan-cost {
+          text-align: center;
+          font-size: 32px;
+          color: #646464;
+          font-weight: bold;
+          margin-bottom: 20px;
+          span {
+            font-size: 14px;
+            color: #c7c7c7;
+            font-weight: 400;
+          }
+        }
+        .plan-features {
+          text-align: center;
+          font-size: 14px;
+          color: #7a7a7a;
+          border-top: 1px solid #e1e1e1;
+          padding-top: 10px;
+          .feature {
+            font-size: 14px;
+            padding: 10px;
+          }
+        }
+        .selection-button {
+          text-align: center;
+          padding: 20px 0 0;
+        }
+      }
+    }
+    .p-button {
+      background: #fff;
+      border-color: lightgrey;
+      color: #646464;
+      padding: 16px 50px 18px;
+      &:hover {
+        background: #3486ff;
+        border-color: #3486ff;
+        color: #fff;
+      }
+    }
+  }
+
+  .custom-plan-wrapper {
+    border: 1px solid lightgrey;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px 0;
+    transition: all 0.2s linear;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    h2 {
+      font-weight: 600;
+    }
+  }
+  .plan-note {
+    text-align: right;
+    font-size: 12px;
+    color: #999999;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    padding: 10px 0;
+  }
+}

@@ -1,0 +1,205 @@
+.header-container-wrapper {
+  height: 60px;
+  background-color: $header-bg;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  .row {
+    align-items: center;
+    .header-icon i {
+      font-size: 18px;
+    }
+  }
+  .logo {
+    display: block;
+    cursor: pointer;
+    img {
+      width: 150px;
+      padding: 10px 0 8px;
+      height: 50px;
+    }
+  }
+  a {
+    color: $white-color;
+  }
+  .menu-wrapper,
+  .header-option-wrapper {
+    padding: 8px 0 8px 10px;
+    align-items: center;
+    ul {
+      padding-left: 0;
+      margin: 0;
+      list-style: none;
+      display: flex;
+      color: $white-color;
+      align-items: center;
+      & > li {
+        .profile-image {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+          padding-right: 0;
+          .user-name {
+            margin: 0 10px;
+          }
+          img {
+            width: 32px;
+            height: 32px;
+            image-rendering: -webkit-optimize-contrast;
+          }
+        }
+        a {
+          display: block;
+          padding: 10px 15px;
+          font-size: 15px;
+          i {
+            margin-left: 10px;
+          }
+        }
+        &:hover {
+          ul {
+            visibility: visible;
+            opacity: 1;
+          }
+        }
+        &.active {
+          & > a {
+            background: #f9f9f921;
+            border-radius: 8px;
+          }
+        }
+        & > ul {
+          display: none;
+          position: absolute;
+          background: #001529d6;
+          width: 250px;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+          visibility: hidden;
+          opacity: 0;
+          box-shadow: 1px 2px 8px #0015295e;
+          border-radius: 0px 0px 6px 6px;
+          padding-top: 15px;
+          padding-bottom: 15px;
+          z-index: 9999;
+          .active-sub-child > a {
+            background: #4854c2;
+          }
+          li {
+            width: 100%;
+            &:hover,
+            &.active {
+              a {
+                background: #001529;
+              }
+            }
+            a {
+              display: block;
+              padding: 10px 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .header-option-wrapper {
+    ul {
+      justify-content: flex-end;
+    }
+  }
+}
+
+.header-sidebar {
+  .p-sidebar-content {
+    padding: 0;
+    .user-image {
+      padding: 20px 20px 0;
+    }
+    .sidebar-user-nav {
+      padding: 0;
+      list-style: none;
+      border-top: 1px solid #dbdbdb;
+      a {
+        border: 0;
+        border-bottom: 1px solid #dbdbdb;
+        color: #4a4a4a;
+        display: block;
+        font-size: 14px;
+        padding: 15px 30px;
+        text-align: left;
+        text-decoration: none !important;
+        transition: all 0.2s ease;
+        font-family: "Inter";
+        letter-spacing: 1px;
+        i {
+          width: 25px;
+        }
+        &:hover {
+          background-color: #eef0f3;
+        }
+        span {
+          margin-left: 11px;
+        }
+      }
+    }
+  }
+}
+
+.header-icon {
+  .p-badge {
+    width: 10px !important;
+    min-width: 10px !important;
+    height: 10px;
+    font-size: 0;
+  }
+}
+
+.project-dropdown {
+  .p-dropdown {
+    background: transparent;
+    color: #fff;
+    outline: 0 !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    .p-dropdown-label {
+      font-size: 14px;
+      color: #fff;
+      font-weight: 600;
+      font-family: "Inter";
+      letter-spacing: 0.8px;
+    }
+    .p-dropdown-trigger-icon {
+      font-size: 14px;
+      color: #ffffff8c;
+      position: relative;
+      top: 2px;
+    }
+  }
+}
+
+.chat-window {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 400px;
+  background: #fff;
+  height: 500px;
+  color: #495057;
+  box-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%),
+    0 1px 3px 0 rgb(0 0 0 / 12%);
+  padding: 10px;
+  border-radius: 12px;
+  z-index: 99999;
+  transition: all 0.2s linear;
+  .p-avatar {
+    position: absolute;
+    right: -20px;
+    bottom: -20px;
+    box-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%),
+      0 1px 3px 0 rgb(0 0 0 / 12%);
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,93 @@
+// External SCSS
+@import url('//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css');
+@import url('//fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+// Prime React
+@import url('https://unpkg.com/primeicons/primeicons.css');
+@import url('https://unpkg.com/primereact/resources/themes/lara-light-indigo/theme.css');
+@import url('https://unpkg.com/primereact/resources/primereact.min.css');
+
+// Component SCSS
+@import '../app.style.config.scss';
+@import './common/variable.scss';
+@import './common/header.scss';
+@import './common/buttons.scss';
+@import './common/dropdown.scss';
+@import './common/page-header.scss';
+@import './common/table.scss';
+@import './common/cards.scss';
+@import './common/react-grid.scss';
+@import './common/tooltips.scss';
+@import './common/progress.scss';
+@import './common/payment-cards.scss';
+@import './common/badges.scss';
+@import './common/input.scss';
+@import './common/image.scss';
+@import './common/divider.scss';
+@import './common/dialog.scss';
+
+// Pages
+@import './pages/auth.scss';
+@import './pages/terms.scss';
+@import './pages/user.scss';
+@import './pages/error-page.scss';
+@import './pages/support.scss';
+@import './pages/billing.scss';
+@import './pages/invoice.scss';
+@import './pages/registry.scss';
+@import './pages/pricing.scss';
+@import './pages/notification.scss';
+@import './pages/reports.scss';
+@import './pages/import-csv.scss';
+@import './pages/list.scss';
+
+// Dialog 
+@import './dialog/tutirial.scss';
+
+// Tools 
+@import './pages/tools/csv-to-registry.scss';
+
+// Node Module SCSS
+@import '/node_modules/react-grid-layout/css/styles.css';
+@import '/node_modules/react-resizable/css/styles.css';
+
+// Global SCSS
+@import './global/bootstrap-grid.min.scss';
+
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #F0F2F5;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  color: #4854c2;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  image-rendering: -webkit-optimize-contrast;
+}
+
+h3 {
+  margin: 5px 0;
+  font-weight: 500;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+
+#root {
+  height: 100vh;
+}

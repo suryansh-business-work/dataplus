@@ -1,0 +1,598 @@
+.CSVImporter_Importer {
+  font-family: Inter;
+  user-select: none;
+}
+.CSVImporter_TextButton {
+  background: #2236f1;
+  padding: 8px 15px 10px;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s linear;
+  height: 40px;
+  color: #fff;
+  border-radius: 6px;
+  border: 1px solid #6366f1;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.8px;
+  &:hover {
+    background: #3744bd;
+  }
+}
+
+.CSVImporter_TextButton:disabled {
+  opacity: 0.25;
+  cursor: default;
+}
+.CSVImporter_IconButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  width: 3em;
+  height: 3em;
+  border: 0;
+  padding: 0;
+  border-radius: 50%;
+  background: transparent;
+  font-size: inherit;
+  color: #000;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.CSVImporter_IconButton:hover:not(:disabled) {
+  background: rgba(128, 128, 128, 0.25);
+}
+.CSVImporter_IconButton:disabled {
+  cursor: default;
+}
+.CSVImporter_IconButton[data-small="true"] {
+  width: 15px;
+  height: 15px;
+  position: relative;
+  top: 8px;
+  right: -2px;
+}
+.CSVImporter_IconButton[data-focus-only="true"] {
+  opacity: 0;
+  pointer-events: none;
+}
+.CSVImporter_IconButton[data-focus-only="true"]:focus {
+  opacity: 1;
+}
+.CSVImporter_IconButton > span {
+  display: block;
+  width: 20px;
+  height: 15px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.CSVImporter_IconButton > span[data-type="back"] {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZvY3VzYWJsZT0iZmFsc2UiIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTE1LjQxIDcuNDFMMTQgNmwtNiA2IDYgNiAxLjQxLTEuNDFMMTAuODMgMTJ6Ij48L3BhdGg+PC9zdmc+");
+}
+.CSVImporter_IconButton > span[data-type="forward"] {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZvY3VzYWJsZT0iZmFsc2UiIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTEwIDZMOC41OSA3LjQxIDEzLjE3IDEybC00LjU4IDQuNTlMMTAgMThsNi02eiI+PC9wYXRoPjwvc3ZnPg==");
+}
+.CSVImporter_IconButton > span[data-type="replay"] {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZvY3VzYWJsZT0iZmFsc2UiIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTEyIDVWMUw3IDZsNSA1VjdjMy4zMSAwIDYgMi42OSA2IDZzLTIuNjkgNi02IDYtNi0yLjY5LTYtNkg0YzAgNC40MiAzLjU4IDggOCA4czgtMy41OCA4LTgtMy41OC04LTgtOHoiPjwvcGF0aD48L3N2Zz4=");
+}
+.CSVImporter_IconButton > span[data-type="arrowBack"] {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZvY3VzYWJsZT0iZmFsc2UiIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTIwIDExSDcuODNsNS41OS01LjU5TDEyIDRsLTggOCA4IDggMS40MS0xLjQxTDcuODMgMTNIMjB2LTJ6Ij48L3BhdGg+PC9zdmc+");
+}
+.CSVImporter_IconButton > span[data-type="close"] {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZvY3VzYWJsZT0iZmFsc2UiIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTE5IDYuNDFMMTcuNTkgNSAxMiAxMC41OSA2LjQxIDUgNSA2LjQxIDEwLjU5IDEyIDUgMTcuNTkgNi40MSAxOSAxMiAxMy40MSAxNy41OSAxOSAxOSAxNy41OSAxMy40MSAxMnoiPjwvcGF0aD48L3N2Zz4=");
+}
+.CSVImporter_IconButton:disabled > span {
+  opacity: 0.25;
+}
+.CSVImporter_IconButton[data-small="true"] > span {
+  font-size: 0.75em;
+}
+.CSVImporter_ImporterFrame {
+  border: 0;
+  padding: 25px 20px;
+  border-radius: 5px;
+  background: #fff;
+}
+.CSVImporter_ImporterFrame__header {
+  display: flex;
+  align-items: center;
+  margin-top: -1em;
+  margin-bottom: 0.2em;
+  margin-left: -1em;
+  font-size: 13px;
+  font-weight: 600;
+}
+.CSVImporter_ImporterFrame__headerTitle {
+  padding-bottom: 0.1em;
+  overflow: hidden;
+  font-size: 15px;
+  color: #202020;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.CSVImporter_ImporterFrame__headerCrumbSeparator {
+  flex: none;
+  display: flex;
+  margin-right: 0.5em;
+  margin-left: 0.5em;
+  font-size: 1.2em;
+  opacity: 0.5;
+}
+.CSVImporter_ImporterFrame__headerCrumbSeparator > span {
+  display: block;
+  width: 1em;
+  height: 1em;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZvY3VzYWJsZT0iZmFsc2UiIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTEwIDZMOC41OSA3LjQxIDEzLjE3IDEybC00LjU4IDQuNTlMMTAgMThsNi02eiI+PC9wYXRoPjwvc3ZnPg==");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.CSVImporter_ImporterFrame__headerSubtitle {
+  flex: none;
+  padding-bottom: 0.1em;
+  color: #202020;
+  font-size: 15px;
+  font-weight: 600;
+}
+.CSVImporter_ImporterFrame__footer {
+  display: flex;
+  align-items: center;
+  margin-top: 1.2em;
+}
+.CSVImporter_ImporterFrame__footerFill {
+  flex: 1 1 0;
+}
+.CSVImporter_ImporterFrame__footerError {
+  flex: none;
+  line-height: 0.8;
+  color: #f44336;
+  word-break: break-word;
+  font-size: 12px;
+}
+.CSVImporter_ImporterFrame__footerSecondary {
+  flex: none;
+  display: flex;
+  margin-left: 1em;
+}
+.CSVImporter_ImporterFrame__footerNext {
+  flex: none;
+  display: flex;
+  margin-left: 1em;
+}
+.CSVImporter_FileSelector {
+  border: dashed 3px #8d8d8d;
+  padding: 10px 20px 0;
+  border-radius: 5px;
+  background-color: #fff;
+  text-align: center;
+  color: #8d8d8d;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  width: 90%;
+  margin: 0 auto;
+  height: 200px;
+}
+
+.CSVImporter_FileSelector:hover {
+  border: dashed 3px #c4eacb;
+  background-color: #f1fdf3;
+  color: #333;
+}
+
+.CSVImporter_FileSelector[data-active="true"] {
+  border-color:  #c4eacb;
+  background-color: #f1fdf3;
+  color: #333;
+}
+.CSVImporter_FormatErrorMessage {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 0.4em;
+  background: #ffffff;
+  font-size: 14px;
+  background-color: #ffcdd2;
+  color: #c63737;
+}
+.CSVImporter_FormatErrorMessage > span {
+  flex: 1 1 0;
+  margin-right: 1em;
+  width: 0;
+  word-break: break-word;
+}
+.CSVImporter_FormatRawPreview__scroll {
+  margin-bottom: 1.2em;
+  height: 6em;
+  overflow: auto;
+  border-radius: 0.4em;
+  background: #404040;
+  color: #f0f0f0;
+}
+.CSVImporter_FormatRawPreview__pre {
+  margin: 0;
+  padding: 10px 15px;
+  line-height: 1.2;
+  font-size: 12px;
+  user-select: none;
+}
+.CSVImporter_FormatRawPreview__pre > aside {
+  display: inline-block;
+  margin-left: 0.2em;
+  padding: 0 0.25em;
+  border-radius: 0.2em;
+  background: #fff;
+  font-size: 0.75em;
+  color: gray;
+  opacity: 0.75;
+}
+.CSVImporter_FormatDataRowPreview {
+  max-height: 200px;
+  min-height: 60px;
+  border: 1px solid #d9d9d9;
+  overflow: auto;
+  border-radius: 4px;
+}
+.CSVImporter_FormatDataRowPreview__table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+.CSVImporter_FormatDataRowPreview__table > thead > tr > th {
+  font-weight: normal;
+}
+.CSVImporter_FormatDataRowPreview__table > thead > tr > th,
+.CSVImporter_FormatDataRowPreview__table > tbody > tr > td {
+  border-right: 1px solid rgba(128, 128, 128, 0.5);
+  line-height: 1;
+  white-space: nowrap;
+  font-size: 12px !important;
+}
+.CSVImporter_FormatDataRowPreview__table > thead > tr > th:last-child,
+.CSVImporter_FormatDataRowPreview__table > tbody > tr > td:last-child {
+  border-right: none;
+}
+.CSVImporter_FormatDataRowPreview__table > thead + tbody > tr:first-child > td,
+.CSVImporter_FormatDataRowPreview__table > tbody > tr + tr > td {
+  padding-top: 0;
+}
+.CSVImporter_FileStep__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 14px !important;
+  color: #464646;
+  margin-top: 20px;
+}
+.CSVImporter_FileStep__headerToggle {
+  display: flex;
+  align-items: center;
+  margin-top: -0.5em;
+  margin-bottom: -0.5em;
+  margin-left: 1.5em;
+  color: #202020;
+  cursor: pointer;
+}
+.CSVImporter_FileStep__headerToggle > input[type="checkbox"] {
+  margin-right: 0.5em;
+  width: 1.2em;
+  height: 1.2em;
+  cursor: pointer;
+}
+.CSVImporter_FileStep__mainPendingBlock {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  padding: 2em;
+  color: gray;
+}
+.CSVImporter_ColumnDragCard {
+  position: relative;
+  z-index: 0;
+  padding: 0.5em 0.75em;
+  border-radius: 0.4em;
+  background: #efefef;
+  box-shadow: 0 1px 1px rgb(0 0 0 / 25%);
+}
+.CSVImporter_ColumnDragCard[data-draggable="true"] {
+  cursor: grab;
+  touch-action: none;
+}
+.CSVImporter_ColumnDragCard[data-dummy="true"] {
+  border-radius: 0;
+  background: #f0f0f0;
+  box-shadow: none;
+  opacity: 0.5;
+  user-select: none;
+}
+.CSVImporter_ColumnDragCard[data-error="true"] {
+  background: #ffcdd2;
+  color: #c63737;
+}
+.CSVImporter_ColumnDragCard[data-shadow="true"] {
+  background: #f0f0f0;
+  box-shadow: none;
+  color: rgba(32, 32, 32, 0.25);
+}
+.CSVImporter_ColumnDragCard[data-drop-indicator="true"] {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  color: #000;
+}
+.CSVImporter_ColumnDragCard__cardHeader {
+  margin-top: -0.25em;
+  margin-right: -0.5em;
+  margin-bottom: 0.25em;
+  margin-left: -0.5em;
+  height: 1.5em;
+  font-weight: bold;
+  color: gray;
+}
+.CSVImporter_ColumnDragCard__cardHeader > b {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background: #f0f0f0;
+  line-height: 1;
+}
+.CSVImporter_ColumnDragCard__cardHeader > var {
+  display: block;
+  margin-bottom: -1px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.CSVImporter_ColumnDragCard__cardPaper[data-draggable="true"]:hover
+  .CSVImporter_ColumnDragCard__cardHeader,
+.CSVImporter_ColumnDragCard__cardPaper[data-dragged="true"]
+  .CSVImporter_ColumnDragCard__cardHeader {
+  color: #000;
+}
+.CSVImporter_ColumnDragCard__cardValue {
+  margin-top: 0.25em;
+  overflow: hidden;
+  line-height: 1.25em;
+  font-size: 0.75em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.CSVImporter_ColumnDragCard__cardValue[data-header="true"] {
+  text-align: center;
+  font-style: normal;
+  color: #5a5a5a;
+}
+.CSVImporter_ColumnDragCard__cardValue + div {
+  margin-top: 0;
+  display: none !important;
+}
+.CSVImporter_ColumnDragCard[data-shadow="true"]
+  > .CSVImporter_ColumnDragCard__cardValue[data-header="true"] {
+  color: #939393;
+}
+.CSVImporter_ColumnDragObject {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: none;
+  pointer-events: none;
+}
+.CSVImporter_ColumnDragObject__positioner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 8em;
+  width: 0;
+  height: 0;
+}
+.CSVImporter_ColumnDragObject__holder {
+  position: absolute;
+  bottom: -0.75em;
+  left: -50%;
+  width: 100%;
+  opacity: 0.9;
+}
+.CSVImporter_ColumnDragSourceArea {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.CSVImporter_ColumnDragSourceArea__control {
+  flex: none;
+  display: flex;
+  align-items: center;
+}
+.CSVImporter_ColumnDragSourceArea__page {
+  position: relative;
+  flex: 1 1 0;
+  display: flex;
+  padding-top: 0.5em;
+  padding-left: 0.5em;
+}
+.CSVImporter_ColumnDragSourceArea__pageIndicator {
+  position: absolute;
+  top: -15px;
+  right: 0;
+  left: 0;
+  text-align: center;
+  font-size: 12px;
+}
+.CSVImporter_ColumnDragSourceArea__pageFiller {
+  flex: 1 1 0;
+  margin-right: 0.5em;
+}
+.CSVImporter_ColumnDragSourceArea__box {
+  position: relative;
+  flex: 1 1 0;
+  margin-right: 0.5em;
+  width: 0;
+}
+.CSVImporter_ColumnDragSourceArea__boxAction {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+.CSVImporter_ColumnDragTargetArea {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  max-height: 320px;
+  overflow: auto;
+}
+.CSVImporter_ColumnDragTargetArea__box {
+  flex-basis: 150px;
+  flex-grow: 0;
+  flex-shrink: 1;
+  width: 0;
+  padding-top: 15px;
+  padding-right: 15px;
+}
+.CSVImporter_ColumnDragTargetArea__boxLabel {
+  margin-bottom: 0.25em;
+  font-weight: 600;
+  color: #202020;
+  word-break: break-word;
+  font-size: 12px;
+}
+.CSVImporter_ColumnDragTargetArea__boxLabel > b {
+  margin-left: 0.25em;
+  color: #c00000;
+}
+.CSVImporter_ColumnDragTargetArea__boxValue {
+  position: relative;
+  z-index: 0;
+}
+.CSVImporter_ColumnDragTargetArea__boxValueAction {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+.CSVImporter_ColumnDragTargetArea__boxPlaceholderHelp {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 98%;
+  padding: 0.5em;
+  text-align: center;
+  color: #333;
+  font-size: 12px;
+  font-weight: 600px;
+}
+.CSVImporter_ProgressDisplay {
+  padding: 2em;
+}
+.CSVImporter_ProgressDisplay__status {
+  text-align: center;
+  font-size: 1.15em;
+  color: #202020;
+}
+.CSVImporter_ProgressDisplay__status.-pending {
+  color: gray;
+}
+.CSVImporter_ProgressDisplay__count {
+  text-align: right;
+  font-size: 1em;
+  color: gray;
+}
+.CSVImporter_ProgressDisplay__count > var {
+  display: inline-block;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+}
+.CSVImporter_ProgressDisplay__progressBar {
+  position: relative;
+  width: 100%;
+  height: 0.5em;
+  background: #f0f0f0;
+}
+.CSVImporter_ProgressDisplay__progressBarIndicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #8bc34a;
+  transition: width 0.2s ease-out;
+}
+
+.CSVImporter_Importer {
+  box-sizing: border-box;
+  line-height: 1.4;
+}
+.CSVImporter_Importer * {
+  box-sizing: border-box;
+}
+body.CSVImporter_dragging {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.CSVImporter_ColumnDragObject {
+  z-index: 999999999 !important;
+}
+
+// .CSVImporter_FileStep__mainResultBlock {
+//   .CSVImporter_FileStep__header:nth-child(1) {
+//     display: none;
+//   }
+//   .CSVImporter_FormatRawPreview {
+//     display: none;
+//   }
+// }
+
+.CSVImporter_ColumnDragSourceArea {
+  position: relative;
+  padding-top: 50px;
+  &:before {
+    content: "CSV Columns";
+    position: absolute;
+    top: 0;
+    font-size: 15px;
+    font-weight: 600;
+  }
+}
+
+.CSVImporter_ColumnDragTargetArea {
+  position: relative;
+  padding-top: 35px;
+  &:before {
+    content: "Registry Columns";
+    position: absolute;
+    top: 0;
+    font-size: 15px;
+    font-weight: 600;
+  }
+}
+
+.CSVImporter_FormatErrorMessage .CSVImporter_TextButton {
+  background: transparent !important;
+  border: 0;
+  color: #333;
+  position: relative;
+  top: 2px;
+  font-weight: 600;
+}
+
+// .uploading-csv {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   padding: 40px;
+// }

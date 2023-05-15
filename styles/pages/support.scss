@@ -1,0 +1,29 @@
+.support-box {
+  text-align: center;
+  padding: 50px 30px;
+  margin: 20px 0;
+  cursor: pointer;
+  transition: all 0.2s linear;
+  .support-heading {
+    h4 {
+      font-size: 24px;
+      color: #001529;
+      margin: 20px 0 10px;
+      font-weight: 400;
+    }
+  }
+  .support-text {
+    p {
+      margin: 0;
+      font-size: 14px;
+      color: #7e7e7e;
+    }
+  }
+  .support-icon {
+    font-size: 40px;
+    color: #4854c2;
+  }
+  .support-text {
+    margin-bottom: 20px;
+  }
+}

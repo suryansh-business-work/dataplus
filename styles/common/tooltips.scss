@@ -1,0 +1,10 @@
+.subcription-tooltips {
+  &.p-tooltip {
+    max-width: 250px;
+    font-size: 14px;
+    line-height: 1.5;
+    .p-tooltip-arrow {
+      display: none;
+    }
+  }
+}

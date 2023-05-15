@@ -1,0 +1,32 @@
+.component-card {
+  background-color: $white-color;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  margin: 30px 10px 0px;
+  min-height: 150px;
+  padding-bottom: 20px;
+  .component-actions {
+    display: flex;
+    align-items: center;
+  }
+  .component-heading-with-action {
+    padding: 20px;
+    border-bottom: 1px solid #dfe1e6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .p-button-icon-only {
+      width: auto;
+      padding: 0px 15px 2px;
+    }
+
+    .p-button-icon-only .p-button-icon {
+      margin-right: 10px;
+    }
+  }
+  .p-button {
+    margin-left: 20px;
+  }
+}

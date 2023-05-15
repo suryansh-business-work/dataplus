@@ -1,0 +1,20 @@
+.custom-table {
+  .p-badge {
+    border-radius: 4px;
+    &.invited {
+      background-color: #ffd8b2;
+      color: #805b36;
+    }
+    &.accepted {
+      background-color: #c8e6c9;
+      color: #256029;
+    }
+    &.rejected {
+      background-color: #ffcdd2;
+      color: #c63737;
+    }
+    &.expired {
+      background: #607d8b;
+    }
+  }
+}

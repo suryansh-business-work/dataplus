@@ -1,0 +1,44 @@
+.invoice-view-mode {
+  width: 50% !important;
+  .invoice-wrapper {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+  }
+  .loader-pdf {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.payment-amount {
+  font-size: 60px;
+  margin: 10px 0 30px;
+}
+
+.other-payment-methods {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  & > div {
+    margin: 10px 60px 0 0px;
+    cursor: pointer;
+  }
+}
+
+.select-card-wrapper {
+  label {
+    width: 130px;
+    display: inline-block;
+    font-weight: 600;
+  }
+  .p-dropdown {
+    width: calc(80% - 130px);
+  }
+}

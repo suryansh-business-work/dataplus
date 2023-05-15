@@ -1,0 +1,28 @@
+.page-header-section {
+  background: $white-color;
+  padding: 20px;
+  .breadcrumb ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    font-size: 14px;
+    li {
+      &:after {
+        content: "/";
+        margin: 0 5px;
+      }
+      a {
+        color: #a5adba;
+      }
+      &:last-child {
+        &:after {
+          display: none;
+        }
+        a {
+          color: #091e42;
+        }
+      }
+    }
+  }
+}
